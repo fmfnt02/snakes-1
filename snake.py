@@ -47,7 +47,7 @@ class Snake():
         self.coords = []
         self.cells = []
         # the tail
-        for k in range(2, 0, -1):
+        for k in range(5, 0, -1):
             self.add_cell(x - k * self.dx, y - k * self.dy)
         self.add_cell(x, y) # the head
 
