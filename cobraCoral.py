@@ -73,9 +73,11 @@ class CobraCoral(Snake):
 
         # AI movements
         if len(self.cells) > 1 and (self.step + 1) % 90 == 0:
-            print("Cobra Coral: detach the head from the tail")
+            print("Cobra Coral: turn to ghost")
             self.color_tail = 'white'
-            self.color_head = 'blue'
+            self.color_head = 'white'
+        elif len(self.cells) > 1 and (self.step + 1) % 180 == 0:
+            print("Cobra Coral: detach the head from the tail")
             self.cells = [self.cells[0]] # detach the head from the tail to move easily
         elif len(self.cells) == 1 and (self.step + 1) % 450 == 0:
             print("Cobra Coral: detach all snake heads")
